@@ -1,0 +1,6 @@
+@Azure_Todo_HostAddress = http://localhost:5030
+
+GET {{Azure_Todo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
