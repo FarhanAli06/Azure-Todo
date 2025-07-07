@@ -29,5 +29,19 @@ namespace Azure_Todo.Controllers
             })
             .ToArray();
         }
+
+        [HttpGet("{id}")]
+        [ProducesResponseType(typeof(WeatherForecast), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public IActionResult GetById(int id)
+        {
+            var forecast = new List<WeatherForecast>().FirstOrDefault(f => f.Id == id);
+            if (forecast == null)
+            {
+                return NotFound();
+            }
+            return Ok(forecast);
+        }
+
     }
 }
