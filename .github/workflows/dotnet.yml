@@ -16,7 +16,7 @@ jobs:
 
     services:
       api:
-        image: farimalik265/azuretodo
+        image: farimalik265/azuretodo:practice
         ports:
           - 8080/tcp # Adjust the port if your API uses a different port
 
